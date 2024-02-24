@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-24T19:07:27 MYT" name="Default suite" finished-at="2024-02-24T19:07:27 MYT" duration-ms="32">
+    <groups>
+    </groups>
+    <test started-at="2024-02-24T19:07:27 MYT" name="Default test" finished-at="2024-02-24T19:07:27 MYT" duration-ms="32">
+      <class name="tests.android.LoginTest">
+        <test-method is-config="true" signature="serverStart()[pri:0, instance:tests.android.LoginTest@1d9b7cce]" started-at="2024-02-24T19:07:06 MYT" name="serverStart" finished-at="2024-02-24T19:07:27 MYT" duration-ms="20129" status="FAIL">
+          <exception class="io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException">
+            <message>
+              <![CDATA[The local appium server has not been started
+Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20005 ms
+Consider increasing the server startup timeout value (currently 20000ms)
+Node.js executable path: C:\Program Files\nodejs\node.exe
+Arguments: [C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 127.0.0.1, --log, C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt, --allow-insecure, chromedriver_autodownload, --local-timezone, --use-plugins, gestures]
+Output: Tried to attach logging to file 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt' but an error occurred: EBUSY: resource busy or locked, unlink 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt'
+Fatal Error: Could not load the plugin 'gestures' because it is not installed. You don't have any plugins installed yet.
+    at getActivePlugins (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\extension\index.js:106:15)
+    at main (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\main.js:343:47)
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException: The local appium server has not been started
+Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20005 ms
+Consider increasing the server startup timeout value (currently 20000ms)
+Node.js executable path: C:\Program Files\nodejs\node.exe
+Arguments: [C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 127.0.0.1, --log, C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt, --allow-insecure, chromedriver_autodownload, --local-timezone, --use-plugins, gestures]
+Output: Tried to attach logging to file 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt' but an error occurred: EBUSY: resource busy or locked, unlink 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt'
+Fatal Error: Could not load the plugin 'gestures' because it is not installed. You don't have any plugins installed yet.
+    at getActivePlugins (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\extension\index.js:106:15)
+    at main (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\main.js:343:47)
+
+at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:201)
+at base.AppiumServer.start(AppiumServer.java:46)
+at base.BaseTest.serverStart(BaseTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20005 ms
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:94)
+at io.appium.java_client.service.local.AppiumDriverLocalService.ping(AppiumDriverLocalService.java:157)
+at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:180)
+... 19 more
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:91)
+... 21 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverStart -->
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:tests.android.LoginTest@1d9b7cce]" started-at="2024-02-24T19:07:27 MYT" name="launchApp" finished-at="1970-01-01T07:30:00 MYT" duration-ms="-1708772847036" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="launchAPPtest()[pri:0, instance:tests.android.LoginTest@1d9b7cce]" started-at="2024-02-24T19:07:27 MYT" name="launchAPPtest" finished-at="2024-02-24T19:07:27 MYT" duration-ms="0" status="SKIP">
+          <exception class="io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException">
+            <message>
+              <![CDATA[The local appium server has not been started
+Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20005 ms
+Consider increasing the server startup timeout value (currently 20000ms)
+Node.js executable path: C:\Program Files\nodejs\node.exe
+Arguments: [C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 127.0.0.1, --log, C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt, --allow-insecure, chromedriver_autodownload, --local-timezone, --use-plugins, gestures]
+Output: Tried to attach logging to file 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt' but an error occurred: EBUSY: resource busy or locked, unlink 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt'
+Fatal Error: Could not load the plugin 'gestures' because it is not installed. You don't have any plugins installed yet.
+    at getActivePlugins (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\extension\index.js:106:15)
+    at main (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\main.js:343:47)
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException: The local appium server has not been started
+Reason: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20005 ms
+Consider increasing the server startup timeout value (currently 20000ms)
+Node.js executable path: C:\Program Files\nodejs\node.exe
+Arguments: [C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\build\lib\main.js, --port, 4723, --address, 127.0.0.1, --log, C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt, --allow-insecure, chromedriver_autodownload, --local-timezone, --use-plugins, gestures]
+Output: Tried to attach logging to file 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt' but an error occurred: EBUSY: resource busy or locked, unlink 'C:\Users\Chan\OneDrive\Desktop\Test Automation\Question 1\Maven_todoits_project\Appiumlog.txt'
+Fatal Error: Could not load the plugin 'gestures' because it is not installed. You don't have any plugins installed yet.
+    at getActivePlugins (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\extension\index.js:106:15)
+    at main (C:\Users\Chan\AppData\Roaming\npm\node_modules\appium\lib\main.js:343:47)
+
+at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:201)
+at base.AppiumServer.start(AppiumServer.java:46)
+at base.BaseTest.serverStart(BaseTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:317)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://127.0.0.1:4723/status] to be available after 20005 ms
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:94)
+at io.appium.java_client.service.local.AppiumDriverLocalService.ping(AppiumDriverLocalService.java:157)
+at io.appium.java_client.service.local.AppiumDriverLocalService.start(AppiumDriverLocalService.java:180)
+... 19 more
+Caused by: java.util.concurrent.TimeoutException
+at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:204)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:91)
+... 21 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchAPPtest -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.android.LoginTest@1d9b7cce]" started-at="2024-02-24T19:07:27 MYT" name="closeApp" finished-at="1970-01-01T07:30:00 MYT" duration-ms="-1708772847041" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method is-config="true" signature="serverStop()[pri:0, instance:tests.android.LoginTest@1d9b7cce]" started-at="2024-02-24T19:07:27 MYT" name="serverStop" finished-at="1970-01-01T07:30:00 MYT" duration-ms="-1708772847106" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- serverStop -->
+      </class> <!-- tests.android.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

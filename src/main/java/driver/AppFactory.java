@@ -6,7 +6,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
-import net.bytebuddy.implementation.bytecode.Throw;
+//import net.bytebuddy.implementation.bytecode.Throw;
 import org.testng.SkipException;
 
 import java.net.MalformedURLException;
@@ -19,9 +19,8 @@ public class AppFactory {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("sdk_gphone64_x86_64")
                 .setPlatformVersion("14.0")
-                .setAppPackage("com.saucelabs.mydemoapp.rn")
+                .setAppPackage("com.saucelabs.mydemoapp.rn") // use apk info to check the package
                 .setAppActivity(".MainActivity");
-
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
         AppDriver.setDriver(driver);
         System.out.println("AndroidDriver is set");
@@ -38,13 +37,14 @@ public class AppFactory {
         System.out.println("IOSDriver is set");
     }
     
-    public static void lauchApp() throws MalformedURLException {
-    	if (AppData.platform.contains("android")){
-    		AppFactory.android_launchApp();
-    	}else if (AppData.platform.contains("ios")){
-    		AppFactory.ios_launchApp();
-    	}else {
-    		throw new SkipException("Enter valid platform value, android or ios");
-    	}
+    public static void launchApp() throws MalformedURLException {
+        System.out.println("entering into launchapp");
+        if(AppData.platform.contains("ios")){
+            ios_launchApp();
+        }else if(AppData.platform.contains("android")){
+            android_launchApp();
+            System.out.println("Android launched...");
+        }else
+            throw new SkipException("Enter valid platform value, android/ios");
     }
 }

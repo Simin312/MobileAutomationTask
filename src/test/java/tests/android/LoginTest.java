@@ -7,7 +7,7 @@ import driver.AppDriver;
 
 public class LoginTest extends BaseTest{
 	@Test
-	public static void launchAPP() {
+	public static void launchAPPtest() {
 		//AppDriver.getCurrentDriver().
 	}
 }
