@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.AppDriver;
-import io.appium.java_client.android.AndroidDriver;
+//import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.SupportsContextSwitching;
 
 public class BasePages {
@@ -132,5 +132,4 @@ public class BasePages {
         }
         return flag;
     }
-	
 }
