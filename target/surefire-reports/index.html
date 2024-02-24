@@ -188,12 +188,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'launchAPPtest')
 data.setCell(0, 2, 'tests.android.LoginTest')
-data.setCell(0, 3, 5);
+data.setCell(0, 3, 2);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 ms</span>
+              <span class="suite-total-time">Total running time: 2 ms</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -226,15 +226,19 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">launchApp</span>
-                <span class="method-start">2239 ms</span>
+                <span class="method-start">3494 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">launchAPPtest</span>
-                <span class="method-start">61684 ms</span>
+                <span class="method-start">30814 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp([TestResult name=launchAPPtest status=SUCCESS method=LoginTest.launchAPPtest()[pri:0, instance:tests...)</span>
+                <span class="method-start">30817 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">serverStop</span>
-                <span class="method-start">61790 ms</span>
+                <span class="method-start">30885 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

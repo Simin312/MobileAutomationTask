@@ -1,5 +1,0 @@
-base\BaseTest.class
-driver\AppDriver.class
-base\AppiumServer.class
-base\AppData.class
-driver\AppFactory.class
