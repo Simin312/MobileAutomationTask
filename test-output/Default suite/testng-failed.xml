@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.android.GetAndPostExamples">
+      <class name="tests.android.Todoits">
         <methods>
-          <include name="testGet"/>
+          <include name="CreateTask"/>
         </methods>
-      </class> <!-- tests.android.GetAndPostExamples -->
+      </class> <!-- tests.android.Todoits -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
