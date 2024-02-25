@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: tests.android.LoginTest
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 31.35 s -- in tests.android.LoginTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 95.40 s -- in TestSuite
