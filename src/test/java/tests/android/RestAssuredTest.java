@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 import io.restassured.response.Response;
-import static io.restassured.matcher.RestAssuredMatchers.*;
+//import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
 
 public class RestAssuredTest {
@@ -34,5 +34,7 @@ public class RestAssuredTest {
 			body("data[1].id", equalTo(8))
 			.log().all();
 	}
+	
+	
 
 }
