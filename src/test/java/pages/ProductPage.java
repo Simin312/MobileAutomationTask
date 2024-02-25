@@ -16,7 +16,7 @@ public class ProductPage extends BasePage{
 		if(AppDriver.getCurrentDriver() instanceof AndroidDriver) {
 			productPage = AppiumBy.accessibilityId("container header");
 		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {
-			productPage = AppiumBy.accessibilityId("");
+			productPage = AppiumBy.accessibilityId("container header");
 		}
 	}
 

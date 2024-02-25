@@ -25,11 +25,11 @@ public class LoginPage extends BasePage{
 	}
 	
 	@AndroidFindBy(accessibility = "Password input field")
-	@iOSXCUITFindBy(accessibility = "")
+	@iOSXCUITFindBy(accessibility = "Password input field")
 	private WebElement Password;
 	
 	@AndroidFindBy(accessibility = "Login button")
-	@iOSXCUITFindBy(accessibility = "")
+	@iOSXCUITFindBy(accessibility = "Login button")
 	private WebElement btnLogin;
 	
 	MenuPage menuPage = new MenuPage();

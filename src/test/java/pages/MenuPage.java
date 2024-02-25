@@ -25,7 +25,7 @@ public class MenuPage extends BasePage {
 	}
 	
 	@AndroidFindBy(accessibility = "menu item log in")
-	@iOSXCUITFindBy(accessibility = "")
+	@iOSXCUITFindBy(accessibility = "menu item log in")
 	public WebElement menuLogin;
 	
 	public void navitageToLogin() {
