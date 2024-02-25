@@ -12,13 +12,28 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class LoginPage extends BasePage{
-	// Username input field
-	// Password input field
-	// Login button
+	/*  Username input field
+	 *  Password input field 
+	 *  Login button
+	 * username is required error message xpath
+	 *  //android.widget.TextView[@text="Username is required"]  
+	 * password is required error message xpath
+	 * 	//android.widget.TextView[@text="Password is required"] 
+	 * username or password is wrong error xpath
+	 * 	//android.widget.TextView[@text="Provided credentials do not match any user in this service."]
+	 *  android xpath "/" type 
+	 * */
 	private By userName;
+	private By userNameErrorText;
+	private By passwordErrorText;
+	private By credentialsErrorText;
+	
 	public LoginPage(){
 		if(AppDriver.getCurrentDriver() instanceof AndroidDriver) {
 			userName = AppiumBy.accessibilityId("Username input field");
+			userNameErrorText = By.xpath("//android.widget.TextView[@text=\"Username is required\"] ");
+			passwordErrorText =By.xpath("//android.widget.TextView[@text=\"Password is required\"] ");
+			credentialsErrorText =By.xpath("//android.widget.TextView[@text=\"Provided credentials do not match any user in this service.\"]");
 		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {
 			userName = AppiumBy.accessibilityId("");
 		}
@@ -37,10 +52,20 @@ public class LoginPage extends BasePage{
 	public void login(String username, String password) {
 		//menuPage.navitageToLogin();
 		waitNtype(userName, username);
+		Password.clear();
 		Password.sendKeys(password);
 		btnLogin.click();
 	}
 	
+	public String getUserNameErrorText() {
+		return getText(userNameErrorText);
+	}
 	
+	public String getPasswordErrorText() {
+		return getText(passwordErrorText);
+	}
 	
+	public String getCredentialsErrorText() {
+		return getText(credentialsErrorText);
+	}
 }

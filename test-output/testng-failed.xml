@@ -5,11 +5,14 @@
     <classes>
       <class name="tests.android.LoginTest">
         <methods>
+          <include name="invalidLogin_Test" invocation-numbers="0 1"/>
           <include name="closeApp"/>
-          <include name="launchAPPtest"/>
+          <include name="invalidLogin_emptyPasswordTest"/>
           <include name="serverStop"/>
           <include name="launchApp"/>
           <include name="serverStart"/>
+          <include name="invalidLogin_emptyUserNameTest"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- tests.android.LoginTest -->
     </classes>
