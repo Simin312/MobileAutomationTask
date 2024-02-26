@@ -2,19 +2,19 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-26T00:11:19 MYT" name="Default suite" finished-at="2024-02-26T00:11:22 MYT" duration-ms="3043">
+  <suite started-at="2024-02-26T20:05:10 MYT" name="Default suite" finished-at="2024-02-26T20:05:12 MYT" duration-ms="2416">
     <groups>
     </groups>
-    <test started-at="2024-02-26T00:11:19 MYT" name="Default test" finished-at="2024-02-26T00:11:22 MYT" duration-ms="3043">
+    <test started-at="2024-02-26T20:05:10 MYT" name="Default test" finished-at="2024-02-26T20:05:12 MYT" duration-ms="2416">
       <class name="tests.android.TodoitsMobileTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.android.TodoitsMobileTest@359f7cdf]" started-at="2024-02-26T00:11:19 MYT" name="setup" finished-at="2024-02-26T00:11:19 MYT" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.android.TodoitsMobileTest@359f7cdf]" started-at="2024-02-26T20:05:10 MYT" name="setup" finished-at="2024-02-26T20:05:10 MYT" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createTestProject()[pri:0, instance:tests.android.TodoitsMobileTest@359f7cdf]" started-at="2024-02-26T00:11:19 MYT" name="createTestProject" finished-at="2024-02-26T00:11:22 MYT" duration-ms="3008" status="PASS">
+        <test-method signature="createTask()[pri:2, instance:tests.android.TodoitsMobileTest@359f7cdf]" started-at="2024-02-26T20:05:10 MYT" name="createTask" finished-at="2024-02-26T20:05:12 MYT" duration-ms="2382" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- createTestProject -->
+        </test-method> <!-- createTask -->
       </class> <!-- tests.android.TodoitsMobileTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

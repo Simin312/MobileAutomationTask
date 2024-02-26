@@ -5,6 +5,7 @@
     <classes>
       <class name="tests.android.TodoitsMobileTest">
         <methods>
+          <include name="setup"/>
           <include name="createTestProject"/>
         </methods>
       </class> <!-- tests.android.TodoitsMobileTest -->

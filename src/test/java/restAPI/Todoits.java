@@ -52,6 +52,21 @@ private String ActiveTasksJsonResponse;
 				extract().asString();
 	}
 	
+	//@Test
+	public void ReopenTask(String taskId) {
+		baseURI = "https://api.todoist.com/rest/v2/";
+		given().
+		headers(
+            "Authorization", "Bearer " + bearerToken, "Content-Type", ContentType.JSON, "Accept", ContentType.JSON).
+			//body(request.toJSONString()).
+    	when().
+        	post("/tasks/+taskId+/reopen").
+		then().
+			statusCode(204).
+			log().all().
+			extract().asString();
+	}
+	
 	
 	public String getProjectInfoJsonResponse() {
         return ProjectInfoJsonResponse;
