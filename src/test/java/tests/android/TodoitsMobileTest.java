@@ -1,39 +1,55 @@
 package tests.android;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import restAPI.Todoits;
+import base.BaseTest;
+import pages.BrowsePage;
+import pages.GooglePermissionPage;
+import pages.HomePage;
+import restAPI.TodoitsAPI;
 
-public class TodoitsMobileTest {
+public class TodoitsMobileTest extends BaseTest {
 	private String ActiveTasksJsonResponse;
 	private String ProjectInfoJsonResponse;
-	Todoits todoits;
+	HomePage homePage;
+	BrowsePage browsePage;
+	TodoitsAPI todoitsAPI;
+	GooglePermissionPage googlePermissionPage;
 	
 	@BeforeClass
 	public void setup() {
-		todoits = new Todoits();
+		homePage = new HomePage();
+		browsePage = new BrowsePage();
+		todoitsAPI = new TodoitsAPI();
+		googlePermissionPage = new GooglePermissionPage();
 	}
 	
-	//@Test(priority = 1)
-	public void createTestProject() {
+	@Test
+	public void createTestProject() throws InterruptedException {
 		// create project from API
-		todoits.AddProject("Create Project From API 2");
-		ProjectInfoJsonResponse = todoits.getProjectInfoJsonResponse();
+		String projectName = "Create Project From API";
+		todoitsAPI.AddProject(projectName);
+		ProjectInfoJsonResponse = todoitsAPI.getProjectInfoJsonResponse();
 		
 		// go to phone to assert
-		
-		
+		googlePermissionPage.signinForTodoist();
+		Assert.assertTrue(homePage.waitForMoreOption());
+		homePage.navigateToBrowse();
+		Thread.sleep(2000);
+		Assert.assertEquals(browsePage.getProjectName(), projectName);
 	}
-	@Test(priority = 2)
+	
+	//@Test(priority = 2)
 	public void createTask() {
 		// create task from android <- the task name
 		
 		// call API to get all active task
 		//todoits.getActiveTasksJsonResponse();
 		// get the Json Responce 
-		todoits.GetAllActiveTask();
-		ActiveTasksJsonResponse = todoits.getActiveTasksJsonResponse();
+		todoitsAPI.GetAllActiveTask();
+		ActiveTasksJsonResponse = todoitsAPI.getActiveTasksJsonResponse();
 		
 		// validate the task name created by Android
 		

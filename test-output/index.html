@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Chan\AppData\Local\Temp\testng-eclipse-1207989693\testng-customsuite.xml</span>
+                    <span>C:\Users\Chan\AppData\Local\Temp\testng-eclipse-547972509\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="tests.android.TodoitsMobileTest" class="method navigator-link" hash-for-method="createTask">createTask</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="tests.android.TodoitsMobileTest" class="method navigator-link" hash-for-method="createTestProject">createTestProject</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -127,9 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="createTask">
-                  </a> <!-- createTask -->
-                  <span class="method-name">createTask</span>
+                  <a name="createTestProject">
+                  </a> <!-- createTestProject -->
+                  <span class="method-name">createTestProject</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Chan\AppData\Local\Temp\testng-eclipse-1207989693\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Chan\AppData\Local\Temp\testng-eclipse-547972509\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -188,14 +188,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createTask')
+data.setCell(0, 1, 'createTestProject')
 data.setCell(0, 2, 'tests.android.TodoitsMobileTest')
-data.setCell(0, 3, 2382);
+data.setCell(0, 3, 16276);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -222,14 +222,30 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tests.android.TodoitsMobileTest</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">serverStart</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-class before">
+                <span class="method-name">launchApp</span>
+                <span class="method-start">4148 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">29779 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">createTask</span>
-                <span class="method-start">14 ms</span>
+                <span class="method-name">createTestProject</span>
+                <span class="method-start">30412 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApp([TestResult name=createTestProject status=SUCCESS method=TodoitsMobileTest.createTestProject()[pri:0...)</span>
+                <span class="method-start">46690 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">serverStop</span>
+                <span class="method-start">46728 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -9,7 +9,7 @@ import io.restassured.http.ContentType;
 
 import static io.restassured.RestAssured.*;
 
-public class Todoits {
+public class TodoitsAPI {
 private String bearerToken = "1559e795da7f06f992467ea70838d8174880d0d7";
 private String ProjectInfoJsonResponse;	
 private String ActiveTasksJsonResponse;
@@ -52,7 +52,6 @@ private String ActiveTasksJsonResponse;
 				extract().asString();
 	}
 	
-	//@Test
 	public void ReopenTask(String taskId) {
 		baseURI = "https://api.todoist.com/rest/v2/";
 		given().

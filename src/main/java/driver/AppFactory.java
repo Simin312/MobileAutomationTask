@@ -19,8 +19,10 @@ public class AppFactory {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("sdk_gphone64_x86_64")
                 .setPlatformVersion("14.0")
-                .setAppPackage("com.saucelabs.mydemoapp.rn") // use apk info to check the package
-                .setAppActivity(".MainActivity");
+                //.setAppPackage("com.saucelabs.mydemoapp.rn") // use apk info to check the package
+                .setAppPackage("com.todoist")
+                //.setAppActivity(".MainActivity");
+                .setAppActivity("com.todoist.activity.HomeActivity");
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
         AppDriver.setDriver(driver);
         System.out.println("AndroidDriver is set");
