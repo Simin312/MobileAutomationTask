@@ -26,6 +26,7 @@ public class TodoitsMobileTest extends BaseTest {
 	
 	private String projectName = "Create Project From API";
 	private String taskContent = "Created Task From Mobile";
+	private String taskId;
 	
 	@BeforeClass
 	public void setup() {
@@ -68,17 +69,23 @@ public class TodoitsMobileTest extends BaseTest {
 		Assert.assertTrue(jsonUtils.isTaskPresent(ActiveTasksJsonResponse, "content", taskContent));
 	}
 	
-	public void ReopenTask() {
+	@Test(priority = 3)
+	public void ReopenTask() throws InterruptedException {
 		// Create Task from mobile
 		// get the task Id
-		
+		taskId = jsonUtils.getIdByContent(ActiveTasksJsonResponse, taskContent);
 		// complete task from mobile
-		
+		projectPage.completeTask();
+		Thread.sleep(2000);
+		System.out.println("Task Id: "+taskId);
 		
 		// reopen Task from API
-		// verify task in your project
+		todoitsAPI.ReopenTask(taskId);
+		Thread.sleep(2000);
+		
+		// verify task in your project <- mobile
+		// I need refresh 
+		projectPage.refresh();
+		Assert.assertEquals(projectPage.getTaskName(), taskContent);
 	}
-	
-	
-	
 }

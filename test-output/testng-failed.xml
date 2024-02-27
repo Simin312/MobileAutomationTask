@@ -5,13 +5,12 @@
     <classes>
       <class name="tests.android.TodoitsMobileTest">
         <methods>
-          <include name="createTask"/>
+          <include name="ReopenTask"/>
           <include name="closeApp"/>
           <include name="setup"/>
           <include name="serverStop"/>
           <include name="launchApp"/>
           <include name="serverStart"/>
-          <include name="createTestProject"/>
         </methods>
       </class> <!-- tests.android.TodoitsMobileTest -->
     </classes>

@@ -13,12 +13,18 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 public class ProjectPage extends BasePage{
 	private By projectName;
 	private By taskName;
-	
+	private By todayOption;
+	private By browseOption;
+	private By getTaskName;
+
 	
 	public ProjectPage() {
 		if(AppDriver.getCurrentDriver() instanceof AndroidDriver) {
 			projectName = AppiumBy.xpath("//android.widget.TextView[@text=\"Create Project From API\"]");
 			taskName = AppiumBy.xpath("//android.widget.EditText[@resource-id=\"android:id/message\"]");
+			todayOption = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[1]");
+			browseOption = 	AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[4]");
+			getTaskName =  AppiumBy.xpath("(//android.widget.TextView[@resource-id=\"com.todoist:id/text\"])[1]");
 		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {	
 		}
 	}
@@ -31,6 +37,10 @@ public class ProjectPage extends BasePage{
 	@iOSXCUITFindBy(accessibility = "Add")
 	private WebElement addBtn;
 	
+	@AndroidFindBy(accessibility = "Complete")
+	@iOSXCUITFindBy(accessibility = "Complete")
+	private WebElement completeCheckBox;
+	
 	public void waitForProjectPageLoad() {
 		waitForEl(projectName);
 	}
@@ -41,5 +51,23 @@ public class ProjectPage extends BasePage{
 		waitNtype(taskName, taskNameByUser);
 		addBtn.click();
 		back();
+		//pullToRefresh();
 	}
+	
+	public void completeTask() {
+		completeCheckBox.click();
+	}
+	
+	public void refresh() {
+		waitNclick(todayOption);
+		waitNclick(browseOption);
+	}
+	
+	public String getTaskName() {
+		return getText(getTaskName);
+	}
+	
+	
+	
+	
 }

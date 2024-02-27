@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-27T22:21:40 MYT" name="Default suite" finished-at="2024-02-27T22:22:24 MYT" duration-ms="44023">
+  <suite started-at="2024-02-28T00:51:59 MYT" name="Default suite" finished-at="2024-02-28T00:52:42 MYT" duration-ms="42405">
     <groups>
     </groups>
-    <test started-at="2024-02-27T22:21:40 MYT" name="Default test" finished-at="2024-02-27T22:22:24 MYT" duration-ms="44023">
+    <test started-at="2024-02-28T00:51:59 MYT" name="Default test" finished-at="2024-02-28T00:52:42 MYT" duration-ms="42405">
       <class name="tests.android.TodoitsMobileTest">
-        <test-method is-config="true" signature="serverStart()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:21:37 MYT" name="serverStart" finished-at="2024-02-27T22:21:40 MYT" duration-ms="2803" status="PASS">
+        <test-method is-config="true" signature="serverStart()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:51:57 MYT" name="serverStart" finished-at="2024-02-28T00:51:59 MYT" duration-ms="2125" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serverStart -->
-        <test-method is-config="true" signature="launchApp()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:21:40 MYT" name="launchApp" finished-at="2024-02-27T22:21:54 MYT" duration-ms="13886" status="PASS">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:51:59 MYT" name="launchApp" finished-at="2024-02-28T00:52:08 MYT" duration-ms="8920" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:21:54 MYT" name="setup" finished-at="2024-02-27T22:21:55 MYT" duration-ms="635" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:08 MYT" name="setup" finished-at="2024-02-28T00:52:09 MYT" duration-ms="688" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="createTestProject()[pri:1, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:21:55 MYT" name="createTestProject" finished-at="2024-02-27T22:22:11 MYT" duration-ms="16341" status="PASS">
+        <test-method signature="createTestProject()[pri:1, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:09 MYT" name="createTestProject" finished-at="2024-02-28T00:52:23 MYT" duration-ms="14337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTestProject -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:22:11 MYT" name="closeApp" finished-at="2024-02-27T22:22:11 MYT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:23 MYT" name="closeApp" finished-at="2024-02-28T00:52:23 MYT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,11 +34,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method signature="createTask()[pri:2, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:22:11 MYT" name="createTask" finished-at="2024-02-27T22:22:24 MYT" duration-ms="13126" status="PASS">
+        <test-method signature="createTask()[pri:2, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:23 MYT" name="createTask" finished-at="2024-02-28T00:52:34 MYT" duration-ms="10563" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTask -->
-        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:22:24 MYT" name="closeApp" finished-at="2024-02-27T22:22:24 MYT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:34 MYT" name="closeApp" finished-at="2024-02-28T00:52:34 MYT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,7 +49,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
-        <test-method is-config="true" signature="serverStop()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-27T22:22:24 MYT" name="serverStop" finished-at="2024-02-27T22:22:24 MYT" duration-ms="5" status="PASS">
+        <test-method signature="ReopenTask()[pri:3, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:34 MYT" name="ReopenTask" finished-at="2024-02-28T00:52:42 MYT" duration-ms="7871" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReopenTask -->
+        <test-method is-config="true" signature="closeApp(org.testng.ITestResult)[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:42 MYT" name="closeApp" finished-at="2024-02-28T00:52:42 MYT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ReopenTask status=SUCCESS method=TodoitsMobileTest.ReopenTask()[pri:3, instance:tests.android.TodoitsMobileTest@38c6f217] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+        <test-method is-config="true" signature="serverStop()[pri:0, instance:tests.android.TodoitsMobileTest@38c6f217]" started-at="2024-02-28T00:52:42 MYT" name="serverStop" finished-at="2024-02-28T00:52:42 MYT" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serverStop -->
