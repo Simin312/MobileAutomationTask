@@ -41,6 +41,7 @@ public class BrowsePage extends BasePage{
 	@iOSXCUITFindBy(accessibility = "Done")
 	private WebElement doneBtn;
 	
+	// self learning function
 	public void addProject() {
 		//waitForEl(overdueTitle);
 		addBtn.click();
@@ -52,6 +53,11 @@ public class BrowsePage extends BasePage{
 	public String getProjectName() {
 		return getText(getCreatedProjectName);
 	}
+	
+	public void navigateToProject() {
+		waitNclick(getCreatedProjectName);
+	}
+	
 	
 	
 	

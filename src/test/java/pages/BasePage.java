@@ -37,6 +37,10 @@ public class BasePage {
 		return AppDriver.getCurrentDriver().findElements(byLocator);
 	}
 	
+	protected void back() {
+		AppDriver.getCurrentDriver().navigate().back();
+	}
+	
 	protected void click(By byLocator) {
 		getEl(byLocator).click();
 	}

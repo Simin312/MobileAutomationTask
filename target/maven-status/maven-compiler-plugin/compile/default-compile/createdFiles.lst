@@ -1,7 +1,0 @@
-base\BaseTest.class
-base\AppiumServer.class
-base\Util$ScrollDirection.class
-driver\AppFactory.class
-base\Util.class
-driver\AppDriver.class
-base\AppData.class

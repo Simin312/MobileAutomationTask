@@ -1,7 +1,0 @@
-pages\BasePage.class
-tests\android\LoginTest.class
-pages\ProductPage.class
-pages\LoginPage.class
-pages\MenuPage.class
-tests\android\ProductsTest.class
-tests\android\RestAssuredTest.class
