@@ -14,6 +14,8 @@ public class ProjectPage extends BasePage{
 	private By projectName;
 	private By taskName;
 	private By todayOption;
+	private By inboxOption;
+	private By searchOption;
 	private By browseOption;
 	private By getTaskName;
 
@@ -23,8 +25,11 @@ public class ProjectPage extends BasePage{
 			projectName = AppiumBy.xpath("//android.widget.TextView[@text=\"Create Project From API\"]");
 			taskName = AppiumBy.xpath("//android.widget.EditText[@resource-id=\"android:id/message\"]");
 			todayOption = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[1]");
+			inboxOption = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[2]");
+			searchOption = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[3]");
 			browseOption = 	AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[4]");
-			getTaskName =  AppiumBy.xpath("(//android.widget.TextView[@resource-id=\"com.todoist:id/text\"])[1]");
+			getTaskName =  AppiumBy.xpath("//android.widget.TextView[@resource-id=\"com.todoist:id/text\"]");
+			
 		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {	
 		}
 	}
@@ -55,15 +60,24 @@ public class ProjectPage extends BasePage{
 	}
 	
 	public void completeTask() {
-		completeCheckBox.click();
+		if(completeCheckBox.isDisplayed()) {
+			completeCheckBox.click();
+		}
 	}
 	
-	public void refresh() {
+	public void refresh() throws InterruptedException {
 		waitNclick(todayOption);
+		//Thread.sleep(4000);
+		//waitNclick(inboxOption);
+		Thread.sleep(2000);
+		//waitNclick(searchOption);
+		Thread.sleep(10000);
 		waitNclick(browseOption);
+		//Thread.sleep(2000);
 	}
 	
 	public String getTaskName() {
+		// is text contain?
 		return getText(getTaskName);
 	}
 	

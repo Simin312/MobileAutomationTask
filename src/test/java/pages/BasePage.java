@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,13 +13,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.AppDriver;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.SupportsContextSwitching;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
 
 public class BasePage {
 	
@@ -47,20 +44,6 @@ public class BasePage {
 	
 	// TODO - in future
 	protected void pullToRefresh() {
-
-		//PointOption PointOptionStart, PointOptionEnd;
-		//Dimension size = AppDriver.getCurrentDriver().manage().window().getSize();
-        //int width = size.getWidth();
-        //int height = size.getHeight();
-
-        // Define the start and end points for the swipe gesture
-        //int startX = width / 2;
-        //int startY = (int) (height * 0.8); // 80% from the bottom
-        //int endY = (int) (height * 0.2);   // 20% from the top
-
-        // Perform the swipe gesture
-        //TouchAction<?> action = new TouchAction<>(driver);
-        //action.press(point(startX, startY)).waitAction(waitOptions(ofMillis(500))).moveTo(point(startX, endY)).release().perform();
 	}
 	
 	protected void click(By byLocator) {

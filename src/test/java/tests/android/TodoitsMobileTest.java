@@ -63,7 +63,7 @@ public class TodoitsMobileTest extends BaseTest {
 		projectPage.createTask(taskContent);
 		
 		// get the Json Responce from API and check the taskContent is appear. 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		todoitsAPI.GetAllActiveTask();
 		ActiveTasksJsonResponse = todoitsAPI.getActiveTasksJsonResponse();
 		Assert.assertTrue(jsonUtils.isTaskPresent(ActiveTasksJsonResponse, "content", taskContent));
@@ -86,6 +86,7 @@ public class TodoitsMobileTest extends BaseTest {
 		// verify task in your project <- mobile
 		// I need refresh 
 		projectPage.refresh();
+		
 		Assert.assertEquals(projectPage.getTaskName(), taskContent);
 	}
 }

@@ -1,0 +1,3 @@
+restAPI\TodoitsAPI.class
+tests\android\GetAndPostExamples.class
+tests\android\RestAssuredTest.class
