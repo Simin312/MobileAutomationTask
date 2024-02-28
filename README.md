@@ -100,12 +100,6 @@ Android Tools
   ![image](https://github.com/Simin312/MobileAutomationTask/assets/48896656/a86fc4ce-be09-4f3b-90d5-1a989d33a7df)
 3. Click start Server to start the Appium Server.
 
-# How to the Appium server
-1. Open Appium Desktop.
-2. Go to Advanced and set as below:
-![alt text](image-2.png)
-3. Click start server button.
-
 # How to run the test with Eclipse IDE
 1. Open the project and find a file called "pom.xml"
 2. Right click your mouse select point to "Run as" and select "Maven clean".
