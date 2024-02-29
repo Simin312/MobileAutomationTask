@@ -56,6 +56,7 @@ public class ProjectPage extends BasePage{
 		waitNclick(taskName);
 		waitNtype(taskName, taskNameByUser);
 		addBtn.click();
+		Thread.sleep(2000);
 		back();
 		Util.scrollToTop();
 	}

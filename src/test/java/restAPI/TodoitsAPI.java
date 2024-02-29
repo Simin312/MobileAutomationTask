@@ -39,11 +39,9 @@ private String ActiveTasksJsonResponse;
 	
 	public void GetAllActiveTask() {
 		baseURI = "https://api.todoist.com/rest/v2/";
-		//JSONObject request = buildProjectRequest("project_id", "2329225985");
 		ActiveTasksJsonResponse = given().
 			headers(
 	            "Authorization", "Bearer " + bearerToken, "Content-Type", ContentType.JSON, "Accept", ContentType.JSON).
-				//body(request.toJSONString()).
         	when().
 	        	get("/tasks").
 			then().
@@ -53,12 +51,10 @@ private String ActiveTasksJsonResponse;
 	}
 	
 	public void ReopenTask(String taskId) {
-		System.out.println("Task id get by api: "+taskId);
 		baseURI = "https://api.todoist.com/rest/v2/";
 		given().
 		headers(
             "Authorization", "Bearer " + bearerToken, "Content-Type", ContentType.JSON, "Accept", ContentType.JSON).
-			//body(request.toJSONString()).
     	when().
         	post("/tasks/"+taskId+"/reopen").
 		then().
@@ -67,7 +63,6 @@ private String ActiveTasksJsonResponse;
 			extract().asString();
 	}
 	
-	
 	public String getProjectInfoJsonResponse() {
         return ProjectInfoJsonResponse;
     }
@@ -75,6 +70,4 @@ private String ActiveTasksJsonResponse;
 	public String getActiveTasksJsonResponse() {
         return ActiveTasksJsonResponse;
     }
-	
-
 }

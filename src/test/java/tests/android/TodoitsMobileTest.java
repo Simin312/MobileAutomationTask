@@ -59,7 +59,7 @@ public class TodoitsMobileTest extends BaseTest {
 		projectPage.waitForProjectPageLoad();
 		projectPage.createTask(taskContent);
 		
-		// get the Json Responce from API and check the taskContent is appear. 
+		// get the Json Responce from API and check the taskContent is appear.
 		todoitsAPI.GetAllActiveTask();
 		ActiveTasksJsonResponse = todoitsAPI.getActiveTasksJsonResponse();
 		Assert.assertTrue(jsonUtils.isTaskPresent(ActiveTasksJsonResponse, "content", taskContent));
@@ -72,7 +72,6 @@ public class TodoitsMobileTest extends BaseTest {
 		// complete task from mobile
 		projectPage.completeTask();
 		Thread.sleep(2000);
-		System.out.println("Task Id: "+taskId);
 		
 		// reopen Task from API
 		todoitsAPI.ReopenTask(taskId);
