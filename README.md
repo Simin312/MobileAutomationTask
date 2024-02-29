@@ -97,8 +97,8 @@ Android Tools
 # How to run the Appium Server
 1. Open appium server.
 2. Set the advanced setting as below:
-![image](https://github.com/Simin312/MobileAutomationTask/assets/48896656/a86fc4ce-be09-4f3b-90d5-1a989d33a7df)
-4. Click start Server to start the Appium Server.
+   ![image](https://github.com/Simin312/MobileAutomationTask/assets/48896656/a86fc4ce-be09-4f3b-90d5-1a989d33a7df)
+3. Click start Server to start the Appium Server.
 
 # How to run the test with Eclipse IDE
 1. Open the project and find a file called "pom.xml"
