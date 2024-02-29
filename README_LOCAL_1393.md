@@ -52,7 +52,7 @@ Please write the automation test in one file.
 # How Appium works?
 1. Appium works in a client - server architecture.
 2. Appium is a 'HTTP Server' written using - Node.js platform.
-![image](https://github.com/Simin312/MobileAutomationTask/assets/48896656/45ab74e5-fb18-4c55-902d-185ad977feb6)
+![alt text](image.png)
 3. Desired Capabilities - Desired capabilities are a set of keys and values sent to the Appium server to tell the server what kind od automation session we are interested in starting up.
 
 # Prerequisite to use Appium (Windos)
@@ -67,41 +67,31 @@ Android Tools
 2. Appium Server/Appium Desktop
 3. Appium Client Library
 
-# How to install Appium on Windows
-1. Check if node.js and npm are installed on your system.
-     1. open command prompt type "node --version"
-     2. open command prompt type "npm --version"
-2. Go to "https://nodejs.org/en/download" download the Windows installer and install it.
-3. Run the installer & install node.js and npm.
-4. Check if node.js & npm are installed.
-   1. open command prompt type "node --version"
-   2. open command prompt type "npm --version"
-5. Install Appium with node.js
-   1. open command prompt type "npm install -g appium"
-6. Check if Appium is installed.
-   1. appium --version
-7. Start Appium
-   1. open command prompt type "appium"
-
-# How to install Appium Doctor
-1. Appium-doctor is a tool to verify appium installation
-2. open command prompt type "npm install appium-doctor -g"
-3. type "npm appium-doctor -h" to see all the available usage.
-
-# How to run the Appium with emulator
+# How to run the emulator
 1. Open android studio run the emulator *Please select a andriod device with Play Store icon, otherwise you are not able to Sign in using Google. 
-![image](https://github.com/Simin312/MobileAutomationTask/assets/48896656/b9953b8c-550d-44f4-92e5-7898f0c9c045)
-2. Launch the emulator after installed.
-3. To check your emulator is running open cmd and cd to "C:\Users\"YourUserName"\AppData\Local\Android\Sdk\platform-tools" then type adb.exe devices -> it will show you the list of devices attached emulator-5554 device
+![alt text](image-1.png)
+2. Open appium server and run it
+3. Open cmd and cd to "C:\Users\"YourUserName"\AppData\Local\Android\Sdk\platform-tools" then type adb.exe devices -> it will show you the list of devices attached emulator-5554 device
 
-# How to run the Appium Server
-1. Open appium server.
-2. Set the advanced setting as below:
-  ![image](https://github.com/Simin312/MobileAutomationTask/assets/48896656/a86fc4ce-be09-4f3b-90d5-1a989d33a7df)
-3. Click start Server to start the Appium Server.
+# How to the Appium server
+1. Open Appium Desktop.
+2. Go to Advanced and set as below:
+![alt text](image-2.png)
+3. Click start server button.
 
 # How to run the test with Eclipse IDE
 1. Open the project and find a file called "pom.xml"
 2. Right click your mouse select point to "Run as" and select "Maven clean".
 3. Click the save icon on the top navigation bar, Eclipse will download all the dependencies you needed in this project.
 4. Open TodoitsMobileTest.java right click the mouse and move to "Run as" and select "TestNG test".
+
+
+
+
+
+
+
+
+
+
+

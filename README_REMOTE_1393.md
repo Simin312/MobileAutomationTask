@@ -105,3 +105,13 @@ Android Tools
 2. Right click your mouse select point to "Run as" and select "Maven clean".
 3. Click the save icon on the top navigation bar, Eclipse will download all the dependencies you needed in this project.
 4. Open TodoitsMobileTest.java right click the mouse and move to "Run as" and select "TestNG test".
+
+
+
+
+
+
+
+
+
+
