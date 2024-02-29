@@ -1,11 +1,8 @@
 package base;
 
-import driver.AppDriver;
 import driver.AppFactory;
-import org.testng.ITest;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-import org.testng.annotations.BeforeMethod;
 
 import java.io.IOException;
 import java.net.MalformedURLException;

@@ -76,7 +76,6 @@ public class Util {
         }
     }
 
-
     public static void scrollNclick(By listItems, String attrName, String text) throws InterruptedException {
         String prevPageSource = "";
         boolean flag = false;

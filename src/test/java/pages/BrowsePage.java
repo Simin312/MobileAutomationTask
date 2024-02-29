@@ -12,24 +12,16 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 
 public class BrowsePage extends BasePage{
 
-	//private By upComingTextView;
-	//private By editText;
 	private By addProject;
 	private By projectName;
 	private By getCreatedProjectName;
-	private By overdueTitle;
-	
 	
 	public BrowsePage() {
 		if(AppDriver.getCurrentDriver() instanceof AndroidDriver) {
-			//upComingTextView = AppiumBy.xpath("//android.widget.TextView[@text=\"Upcoming\"]");
-			//editText = AppiumBy.xpath("//android.widget.EditText[@resource-id=\"android:id/message\"]");
 			addProject = AppiumBy.xpath("//android.widget.TextView[@text=\"Add project\"]");
 			projectName = AppiumBy.xpath("//android.widget.EditText[@resource-id=\"com.todoist:id/name\"]");
 			getCreatedProjectName = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView/descendant::android.widget.TextView[contains(@text, 'Create Project From API')]");
-			overdueTitle = AppiumBy.xpath("//android.widget.TextView[@resource-id=\"android:id/title\" and @text=\"Overdue\"]");
-		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {
-			
+		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {	
 		}
 	}
 	
@@ -41,15 +33,6 @@ public class BrowsePage extends BasePage{
 	@iOSXCUITFindBy(accessibility = "Done")
 	private WebElement doneBtn;
 	
-	// self learning function
-	public void addProject() {
-		//waitForEl(overdueTitle);
-		addBtn.click();
-		waitNclick(addProject);
-		waitNtype(projectName, "Create Project");
-		doneBtn.click();
-	}
-	
 	public String getProjectName() {
 		return getText(getCreatedProjectName);
 	}
@@ -57,10 +40,4 @@ public class BrowsePage extends BasePage{
 	public void navigateToProject() {
 		waitNclick(getCreatedProjectName);
 	}
-	
-	
-	
-	
-	
-	
 }

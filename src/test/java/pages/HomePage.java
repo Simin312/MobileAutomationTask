@@ -24,8 +24,7 @@ public class HomePage extends BasePage{
 			inboxOption = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[2]");
 			searchOption = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[3]");
 			browseOption = AppiumBy.xpath("//androidx.compose.ui.platform.ComposeView[@resource-id=\"com.todoist:id/compose_navigation_holder\"]/android.view.View/android.view.View/android.view.View/android.view.View[4]");
-		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {
-			
+		}else if(AppDriver.getCurrentDriver() instanceof IOSDriver) {	
 		}
 	}
 	
@@ -36,6 +35,4 @@ public class HomePage extends BasePage{
 	public void navigateToBrowse() {
 		waitNclick(browseOption);
 	}
-	
-	
 }

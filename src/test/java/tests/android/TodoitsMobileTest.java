@@ -55,15 +55,11 @@ public class TodoitsMobileTest extends BaseTest {
 	@Test(priority = 2)
 	public void createTask() throws InterruptedException {
 		// create task from android 
-		//googlePermissionPage.signinForTodoist();
-		//Assert.assertTrue(homePage.waitForMoreOption());
-		//homePage.navigateToBrowse();
 		browsePage.navigateToProject();
 		projectPage.waitForProjectPageLoad();
 		projectPage.createTask(taskContent);
 		
 		// get the Json Responce from API and check the taskContent is appear. 
-		Thread.sleep(5000);
 		todoitsAPI.GetAllActiveTask();
 		ActiveTasksJsonResponse = todoitsAPI.getActiveTasksJsonResponse();
 		Assert.assertTrue(jsonUtils.isTaskPresent(ActiveTasksJsonResponse, "content", taskContent));
@@ -71,7 +67,6 @@ public class TodoitsMobileTest extends BaseTest {
 	
 	@Test(priority = 3)
 	public void ReopenTask() throws InterruptedException {
-		// Create Task from mobile
 		// get the task Id
 		taskId = jsonUtils.getIdByContent(ActiveTasksJsonResponse, taskContent);
 		// complete task from mobile
@@ -81,12 +76,10 @@ public class TodoitsMobileTest extends BaseTest {
 		
 		// reopen Task from API
 		todoitsAPI.ReopenTask(taskId);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
-		// verify task in your project <- mobile
-		// I need refresh 
-		projectPage.refresh();
-		
+		// verify task in your project 
+		projectPage.refresh();	
 		Assert.assertEquals(projectPage.getTaskName(), taskContent);
 	}
 }

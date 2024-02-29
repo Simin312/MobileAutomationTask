@@ -6,6 +6,7 @@
       <class name="tests.android.TodoitsMobileTest">
         <methods>
           <include name="ReopenTask"/>
+          <include name="createTask"/>
           <include name="closeApp"/>
           <include name="setup"/>
           <include name="serverStop"/>

@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import base.Util;
 import driver.AppDriver;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
@@ -50,13 +51,13 @@ public class ProjectPage extends BasePage{
 		waitForEl(projectName);
 	}
 	
-	public void createTask(String taskNameByUser) {
+	public void createTask(String taskNameByUser) throws InterruptedException {
 		quickAdd.click();
 		waitNclick(taskName);
 		waitNtype(taskName, taskNameByUser);
 		addBtn.click();
 		back();
-		//pullToRefresh();
+		Util.scrollToTop();
 	}
 	
 	public void completeTask() {
@@ -66,22 +67,12 @@ public class ProjectPage extends BasePage{
 	}
 	
 	public void refresh() throws InterruptedException {
-		waitNclick(todayOption);
-		//Thread.sleep(4000);
-		//waitNclick(inboxOption);
 		Thread.sleep(2000);
-		//waitNclick(searchOption);
-		Thread.sleep(10000);
-		waitNclick(browseOption);
-		//Thread.sleep(2000);
+		Util.scrollToTop();
 	}
 	
 	public String getTaskName() {
 		// is text contain?
 		return getText(getTaskName);
 	}
-	
-	
-	
-	
 }
